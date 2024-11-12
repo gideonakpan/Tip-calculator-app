@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <header>
+    <h1 class="header-title">SPLI <br> TTER</h1>
+  </header>
+
+  <main>
+      <section class="input-section">
+        <div class="input-group">
+          <label class="input-label" for="bill">Bill<span id="input-label_bill">Can't be zero</span></label>
+          <div class="input-box">
+            <i class="fa fa-dollar icon"></i>
+            <input class="input-field" type="number" id="bill" name="bill" aria-label="Bill Amount">
+        </div>
+        </div>
+  
+        <div class="input-group">
+          <label class="input-label" for="percent">Select Tip % <span id="input-label_tip">Can't be zero</span></label>
+          <div class="tip-buttons">
+            <button class="tip-button" aria-label="5 percent tip">5%</button>
+            <button class="tip-button" aria-label="10 percent tip">10%</button>
+            <button class="tip-button" aria-label="15 percent tip">15%</button>
+            <button class="tip-button" aria-label="25 percent tip">25%</button>
+            <button class="tip-button" aria-label="50 percent tip">50%</button>
+            <input class="custom-tip-input" type="text" placeholder="Custom" aria-label="Custom Tip Percentage">
+          </div>
+        </div>
+  
+        <div class="input-group">
+          <div>
+            <label class="input-label" for="people"><span>Number of People</span> <span id="input-label_people">Can't be zero</span></label>  
+          </div>
+          <div class="input-box">
+            <i class="fa fa-user icon"></i>
+            <input class="input-field" type="number" name="people" aria-label="Number of People">
+          </div>
+        </div>
+      </section>
+
+      <section class="result-section">
+        <div class="result-group">
+          <div>
+            <p class="result-label">Tip Amount</p>
+            <span>/ person</span>
+          </div>
+          <div class="result-value" id="tip-result">$0.00</div>
+        </div>
+
+        <div class="result-group">
+          <div>
+            <p class="result-label">Total</p>
+            <span>/ person</span>
+          </div>
+          <div class="result-value" id="total-result">$0.00</div>
+        </div>
+
+        <button class="button-reset">RESET</button>
+      </section>
+  </main>
+
+  <footer class="footer-attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Gideon Akpan</a>.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

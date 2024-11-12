@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(173, 61%, 77%);;
+    --dark-cyan: hsl(172, 67%, 45%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--light-grayish-cyan);
+    flex-direction: column;
+    font-family: "Space Mono", serif;
+}
+main {
+    background: var(--white);
+    padding: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 2rem 0;
+    border-radius: 15px;   
+}
+.input-section {
+    display: flex;
+    flex-direction: column;
+}
+.header-title {
+    color: var(--very-dark-cyan);
+    word-spacing: 1em;
+}
+
+ .input-label {
+    margin-bottom: 0.5em;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+ }
+ #input-label_bill{
+    color: red;
+    display: none;
+ }
+ #input-label_tip{
+    color: red;
+    display: none;
+ }
+ #input-label_people{
+    color: red;
+    display: none;
+ }
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+.input-box {
+    padding: 0 0.5em;
+    width: 100%;
+    border-radius: 5px;
+    background: var(--very-light-grayish-cyan);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Pushes contents to the right */
+}
+
+.input-box:focus-within {
+    border: 3px solid var(--dark-grayish-cyan);
+    border-radius: 5px;
+}
+.input-box i {
+    min-width: 40px;
+}
+.input-field {
+    padding: 0.5em;
+    background: inherit;
+    border: none;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--very-dark-cyan);
+    margin-left: auto; /* Aligns the input to the far right */
+    width: auto; /* Optional: prevents stretching */
+}
+.input-field:active {
+    border: none;
+}
+/* Remove spinners in Chrome, Safari, and Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove spinners in Firefox */
+/* input[type="number"] {
+    -moz-appearance: textfield;
+} */
+
+.tip-buttons {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.tip-button {
+    padding: 7px 14px;
+    background: var(--very-dark-cyan);
+    color: var(--white);
+    height: 2em;
+    width: 3.3em;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.custom-tip-input {
+    /* padding: 7px; */
+    background: var(--very-light-grayish-cyan);
+    color: var(--very-dark-cyan);
+    height: 2.6em;
+    width: 3.6em;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 4px;
+
+}
+.tip-button:hover {
+    background: var(--dark-grayish-cyan);
+    color: var(--very-dark-cyan);
+}
+.tip-button:active {
+    padding: 7px 14px;
+    background: var(--grayish-cyan);
+    color: var(--very-dark-cyan);
+}
+
+
+
+.result-section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1fr;
+    background: var(--very-dark-cyan);
+    padding: 2em;
+    border-radius: 8px;
+}
+.result-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+.result-group .result-label{
+    color: var(--white);
+}
+.result-group span{
+    color: var(--light-grayish-cyan);
+    font-size: 12px;
+}
+.result-value {
+    color: var(--dark-cyan);
+    font-weight: 800;
+    font-size: 30px;
+}
+.button-reset {
+    width: 100%;
+    margin-top: 4em;
+    background: var(--dark-grayish-cyan);
+    color: var(--very-dark-cyan);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: var(--very-dark-cyan); }
+
+@media only screen and (max-width: 600px) {
+    main {
+        grid-template-columns:  1fr;
+        margin: 0; 
+    }
+
+}
